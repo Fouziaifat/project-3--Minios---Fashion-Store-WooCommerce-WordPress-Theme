@@ -1,3 +1,6 @@
+// original website link
+// https://preview.themeforest.net/item/minios-fashion-store-woocommerce-theme/full_screen_preview/52076108
+
 let myBtn = document.getElementById("myBtn");
 
 // When the user scrolls down 300px from the top of the document, show the button
