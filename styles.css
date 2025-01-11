@@ -136,7 +136,181 @@ main #demo .item .wrap a h3 {
   font-weight: 400;
   color: #000;
 }
-@media (max-width: 1440px) {
+/* sell online section */
+#shop {
+  background-image: url(image/bg-shop.jpg);
+  position: relative;
+  padding: 140px 0 755px;
+  margin-bottom: 0;
+  background-size: cover;
+  display: block;
+}
+#shop .container-default .title-block {
+  position: relative;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+#shop .container-default .title-block h3 {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #000;
+}
+#shop .container-default .title-block p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+/* installation section */
+#installation {
+  margin: 125px 0 100px;
+  display: block;
+}
+#installation .row {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+#installation .row .col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+  width: 50%;
+  padding: 10px;
+}
+footer h3 {
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 40px;
+}
+footer .btn-footer {
+  display: inline-block;
+  line-height: 48px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  background: #86230e;
+}
+footer .btn-footer:hover {
+  background-color: #000;
+}
+#installation .row .col-5 {
+  width: 50%;
+  /* Set the flex item's behavior:
+   - flex-grow: 0 (prevents the item from growing to fill extra space)
+   - flex-shrink: 0 (prevents the item from shrinking when space is limited)
+   - flex-basis: 41.666667% (sets the base width of the item to 41.666667% of the container's width) */
+  flex: 0 0 41.666667%;
+
+  /* Limit the maximum width of the item to 41.666667% of the container */
+  max-width: 41.666667%;
+  padding: 10px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#installation p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+/* features section */
+#features {
+  padding: 100px 0 150px;
+  background: #faf9f7;
+}
+
+.title-block {
+  position: relative;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#features .title-block h2 {
+  font-size: 32px;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+#features .plugins {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 50px;
+}
+
+#features .plugins .plugin-img img {
+  box-shadow: -7px 4px 128px 0 rgba(140, 140, 140, 0.2);
+  width: 100%;
+  max-width: max-content;
+}
+#features .plugins h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 30px 0 0;
+}
+/* footer section */
+footer {
+  background-image: url(image/footer.jpg);
+  padding: 380px 0;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+footer .logo img {
+  max-width: 253px;
+}
+
+/* screen show button  */
+#myBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50%;
+  border: 0;
+  outline: unset;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#myBtn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media (min-width: 1440px) {
   .container-header {
     width: 100%;
   }
@@ -162,13 +336,18 @@ main #demo .item .wrap a h3 {
     margin-top: 25px;
     font-size: 22px;
   }
-  .col-md-6,
+
   .col-lg-4 {
     padding-right: 15px;
     padding-left: 15px;
   }
   main #demo .item .demo-image {
     height: 300px;
+  }
+  #features .plugins {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
   }
 }
 
@@ -182,6 +361,13 @@ main #demo .item .wrap a h3 {
     max-width: 33.3333%;
   }
 }
+@media (max-width: 992px) {
+  #features .plugins {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
 @media (max-width: 767px) {
   .bwp-header {
     padding: 100px 0 100px;
@@ -191,5 +377,16 @@ main #demo .item .wrap a h3 {
 @media (min-width: 768px) {
   main #demo .item .demo-image {
     height: 570px;
+  }
+}
+@media (max-width: 768px) {
+  #shop {
+    display: none;
+  }
+  #installation {
+    display: none;
+  }
+  #features {
+    display: none;
   }
 }
